@@ -47,7 +47,7 @@
 			    $fecha3 	= $val->name('fecha3')->value($_POST['fecha3'])->date("d/m/Y")->maxDate("01/01/2020")->required()->return();
 			    $fecha4 	= $val->name('fecha4')->value($_POST['fecha4'])->date("d/m/Y")->minDate("30/01/2020")->return();
 			    $fecha5 	= $val->name('fecha5')->value($_POST['fecha5'])->date("d/m/Y")->betweenDate("01/01/2020","31/01/2020")->return();
-			    $file 		= $val->name('file')->value($_FILES['file'])->file()->required()->return(); //array('png','jpg','gif'),1
+			    $file 		= $val->name('file')->value($_FILES['file'])->file()->return(); //array('png','jpg','gif'),1
 
 		    if($val->isSuccess()){
 		        echo 'Todos los campos estan correctos';        

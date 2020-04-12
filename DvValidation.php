@@ -392,7 +392,7 @@ class DvValidation {
     */
     public function file($extensions = null,$size = null){
         $this->type = 'file';
-        if(!is_null($this->value['tmp_name'])){
+        if(!empty($this->value['tmp_name'])){
             //validación de extensión
             $ext = pathinfo($this->value['name'], PATHINFO_EXTENSION);
             $fileSize = ($this->value['size'])/(1024*1024); //escala en MB
